@@ -20,8 +20,9 @@ To run this script you will need two multisample VCFs:
 1. parent1-parent2 VCF (parent1_parent2.vcf)
 2. parent1-parent2-pool1-pool2 VCF (complite.vcf)
 
-In the end you will obtain a filtered parent1-pool1-pool2 VCF or a parent2-pool1-pool2 VCF, this depends on your decision which parent to keep for the Qtl-plots.
 The whole pipeline is aimed to prepare a suitable file for QtlSeq (https://github.com/YuSugihara/QTL-seq).
-Working with parental vcf file and then intersecting the filtered vcf with the full parent1-parent2-pool1-pool2 VCF is a redundant logic.
-It would be better to perform all the filtering steps using the single parent1-parent2-pool1-pool2 VCF, but technically the current redundant path turned to be more approachable.
+In the end you obtain a filtered parent1-pool1-pool2.vcf or a parent2-pool1-pool2.vcf file - this depends on your decision which parent to keep for the Qtl-plots.
+Working with parental vcf file and then intersecting its filtered version with the full parent1-parent2-pool1-pool2 file is redundant.
+It would be preferable to apply all filtering steps to the single parent1-parent2-pool1-pool2 file, but the current redundant workflow turned to be technically easier.
+
 Do not forget to filter your files by quality and coverage of SNPs before you use this script.
